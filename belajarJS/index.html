@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <div class="login">
+        <p>Silahkan melakukan Daftar terlebih dahulu</p>
+        <button onclick="tampilModal()">Login</button>
+    </div>
+
+    <div id="idModal" class="modal">
+        <form class="modal-content" method="post">
+            <div class="container">
+                <span onclick="tutupModal()" class="close" title="close modal">&times;</span>
+                <label for="uname">
+                    <b>Nama :</b>
+                </label>
+                <br>
+                <input type="text" name="Username" id="Username"><br>
+
+                <label for="psw">
+                    <b>no hp :</b>
+                </label>
+                <br>
+                <input type="text" name="password" id="password"><br>
+
+                <input type="button" value="login" id="submit" onclick="validate()">
+            </div>
+
+            <div class="container" style="background-color: grey;">
+                <br><b>Username : user</b><br><b>Password : 123</b>
+            </div>
+        </form>
+    </div>
+
+    <script src="modal.js"></script>
+</body>
+</html>

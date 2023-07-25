@@ -1,0 +1,176 @@
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'navbar navbar navbar'
+    'header header header'
+    'leftbar content rightbar'
+    'footer footer footer' 
+    ;
+}
+
+.navbar{
+    grid-area: navbar;
+    
+}
+
+ul{
+    list-style-type:none;
+    overflow: auto;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    font-family: "Open Sans";
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 25px 100px 25px 100px;
+}
+
+li a:hover{
+    color: yellow;
+}
+
+#logo{
+    color: red;
+    font-size: "Castellar";
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 5px 1px 10px red;
+    font-weight: bolder;
+    padding: 10px 30px 25px 100px;
+}
+
+.header{
+    grid-area: header;
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 500px;
+    width: 100%;
+}
+.content{
+    grid-area: content;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 100px;
+}
+.footer{
+    grid-area: footer;
+    background-color: red;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 30px 25px 100px;
+}
+
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.headerbutton{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 20px 37px;
+    text-align: center;
+    display: inline-block;
+    font-size: 21px;
+    margin: 4px 2px;
+}
+
+.headerbutton:hover{
+    background-color: darkred;
+}
+
+img{
+    width: 100%;
+}
+
+.column{
+    float: left;
+    width: 25%;
+    padding: 10px 0px 10px 0px;
+}
+
+.row{
+    margin: 0 -5px;
+}
+
+.card{
+    width: 90%;
+    border-style: solid;
+}
+
+.container{
+    padding: 10px 25px;
+}
+
+#customtable{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+}
+
+#customtable td, #customtable th {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+#customtable tr:nth-child(even){
+    background-color: lightgrey;
+}
+
+#customtable tr:hover{
+    background-color: white;
+}
+
+#customtable th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+.leftbar{
+    grid-area: leftbar;
+    background-color: lightslategrey;
+    text-align: center;
+    padding: 130px;
+}
+
+.rightbar{
+    grid-area: rightbar;
+    background-color: lightslategrey;
+    text-align: center;
+    padding: 130px;
+}
+
+@media (max-width:600px){
+    .grid-container{
+        grid-template-areas: 
+        'navbar'
+        'header'
+        'leftbar'
+        'content'
+        'rightbar'
+        'footer'
+        ;
+    }
+}
